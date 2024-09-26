@@ -7,4 +7,5 @@ from django.core.exceptions import ValidationError
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        fields = ['id', 'title', 'due_date', 'status']
+        # fields = ['id', 'title', 'due_date', 'status']
+        fields='__all__'
