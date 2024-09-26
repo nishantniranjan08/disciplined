@@ -25,7 +25,7 @@ class Task(models.Model):
     )
     user = models.ForeignKey(Users, on_delete=models.CASCADE, related_name='tasks')
     title = models.CharField(max_length=255)
-    due_date = models.DateTimeField(null=True, blank=True)
+    due_date = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
